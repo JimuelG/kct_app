@@ -1,7 +1,6 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:kct/Core/screens/home_screen.dart';
+import 'package:kct/screens/home_screen.dart';
 
 class BottomNavBar extends StatefulWidget {
   const BottomNavBar({super.key});
@@ -51,11 +50,6 @@ class _BottomNavBarState extends State<BottomNavBar> {
                 activeIcon:
                     Icon(FluentSystemIcons.ic_fluent_settings_dev_filled),
                 label: "Settings"),
-            BottomNavigationBarItem(
-                icon: Icon(FluentSystemIcons.ic_fluent_settings_dev_regular),
-                activeIcon:
-                Icon(FluentSystemIcons.ic_fluent_settings_dev_filled),
-                label: "Setting"),
           ]),
     );
   }
