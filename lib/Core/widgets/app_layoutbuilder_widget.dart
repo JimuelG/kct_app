@@ -4,7 +4,9 @@ class AppLayoutBuilderWidget extends StatelessWidget {
 
   final int randomDivider;
   final double separator;
-  const AppLayoutBuilderWidget({super.key, required this.randomDivider, this.separator = 3});
+  final bool? isColor;
+
+  const AppLayoutBuilderWidget({super.key, required this.randomDivider, this.separator = 3, this.isColor});
 
   @override
   Widget build(BuildContext context) {
@@ -15,9 +17,9 @@ class AppLayoutBuilderWidget extends StatelessWidget {
         children: List.generate((constraints.constrainWidth()/randomDivider).floor(), (index) => SizedBox(
           width: separator,
           height: 1,
-          child: const DecoratedBox(
+          child: DecoratedBox(
             decoration: BoxDecoration(
-              color: Colors.white
+              color: isColor==null? Colors.white : Colors.grey.shade300
         )),
         )),
       );
