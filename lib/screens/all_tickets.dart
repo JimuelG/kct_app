@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kct/Core/utils/all_json.dart';
+import 'package:kct/Core/utils/app_routes.dart';
 import 'package:kct/Core/widgets/ticket_view.dart';
 
 class AllTickets extends StatelessWidget {
@@ -20,7 +21,8 @@ class AllTickets extends StatelessWidget {
                   GestureDetector(
                     onTap: (){
                       var index = ticketList.indexOf(singleTicket);
-                    
+                      Navigator.pushNamed(context, AppRoutes.ticktScreen, 
+                      arguments: {"index": index});
                     },
                     child: Container(
                     margin: const EdgeInsets.only(bottom: 20),

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:kct/Core/utils/app_routes.dart';
 import 'package:kct/screens/all_tickets.dart';
+import 'package:kct/screens/home/all_hotels.dart';
+import 'package:kct/screens/hotel_detail.dart';
 import 'package:kct/screens/ticket/ticket_screen.dart';
 
 import 'Core/BottomNavBar.dart';
@@ -16,9 +19,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       routes: {
-        "/":(context) => const BottomNavBar(),
-        "/all_tickets":(context) => const AllTickets(),
-        "/ticket_view":(context) => const TicketScreen()
+        AppRoutes.homePage:(context) => const BottomNavBar(),
+        AppRoutes.allTickets:(context) => const AllTickets(),
+        AppRoutes.ticktScreen:(context) => const TicketScreen(),
+        AppRoutes.allHotels:(context) => const AllHotels(),
+        AppRoutes.hotelDetail:(context) => const HotelDetail()
       },
     );
   }

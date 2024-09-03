@@ -1,6 +1,7 @@
 import 'package:fluentui_icons/fluentui_icons.dart';
 import 'package:flutter/material.dart';
 import 'package:kct/Core/utils/all_json.dart';
+import 'package:kct/Core/utils/app_routes.dart';
 import 'package:kct/Core/widgets/app_double_text.dart';
 import 'package:kct/Core/widgets/ticket_view.dart';
 import 'package:kct/screens/home/widgets/hotel.dart';
@@ -86,6 +87,7 @@ class HomeScreen extends StatelessWidget {
                       bigText: 'Hotels', 
                       smallText: 'View all',
                       func: (){
+                        Navigator.pushNamed(context, AppRoutes.allHotels);
                       },
                     ),
                     const SizedBox(height: 20),
